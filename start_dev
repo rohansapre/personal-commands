@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# path for server.js
+serverPath=/home/rohansapre/Workspace/webdev/web_dev/server.js
+
+# start mongodb server in background
+mongod &
+
+#start node server in background
+node $serverPath &

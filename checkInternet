@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# ping google once to see if the internet is connected
+if ping -c 1 google.com >> /dev/null 2>&1; then
+	echo "Connected to the internet. You're good to go!"
+else
+	echo "Please check your internet connection, it seems to be offline"
+fi

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# array of servers running
+processes=("node" "mongod")
+
+# iterate over the processes
+for p in "${processes[@]}"
+do
+	# kill the process by finding its process id
+	ps | grep $p | grep -v grep | awk '{print "kill " $1}' | sh
+done
